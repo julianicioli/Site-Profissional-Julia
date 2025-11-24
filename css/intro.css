@@ -1,0 +1,59 @@
+.intro {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+  min-height: 70vh; /* altura mínima de 70% da tela */
+  /* ou use height: 500px; para altura fixa */
+}
+
+.intro h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h3 {
+  font-size: 1.7rem;
+  color: #dadada;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.5rem;
+  color: #777777;
+}
+
+@media (max-width: 1000px) {
+  .intro h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .intro h1 {
+    font-size: 2rem;
+  }
+  .intro h1::before {
+    width: 40px;
+    height: 10px;
+    left: -10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+  .intro img {
+    display: none;
+  }
+}

@@ -1,0 +1,138 @@
+.entreemcontato {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contato-pessoal {
+  color: #cac7c7;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.contato-pessoal:hover {
+  color: rgb(244, 244, 72);   /* texto amarelo (já é amarelo, mas pode usar outro efeito se quiser) */
+}
+/* Popup do formulário */
+.form-popup {
+    display: none;                 /* inicialmente escondido */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;              /* preto mais claro */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    width: 300px;
+    z-index: 1000;
+}
+
+/* Título do formulário */
+.form-popup h3 {
+    color: #c2c2c2;                /* amarelo */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Inputs e textarea */
+#nome, #numero, #mensagem, #email {
+    width: 100%;
+    padding: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+    margin-left: -8px;
+    border-radius: 6px;
+    border: 1px solid #bd80e8;    /* roxo */
+    background: #222;              /* fundo escuro dentro dos inputs */
+    color: #fff;
+}
+
+/* Placeholder dos inputs */
+#nome::placeholder,
+#numero::placeholder,
+#mensagem::placeholder {
+    color: #ccc;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: italic;
+}
+
+/* Container de botões */
+.botoes-container {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Botão Enviar */
+.btn-form {
+    background-color: #675967;    /* verde */
+    color: rgb(219, 216, 216);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+
+}
+
+.btn-form:hover {
+  background-color: rgb(68, 54, 81);  
+    transition: 0.3s;
+}
+
+.popup-erro {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-erro-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: popupShow .2s ease-out;
+}
+
+.popup-erro-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.popup-erro-box button {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.popup-erro-box button:hover {
+    background: #c62839;
+}
+
+@keyframes popupShow {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
